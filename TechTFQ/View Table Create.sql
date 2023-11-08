@@ -1,0 +1,68 @@
+-- CUSTOMER
+
+CREATE TABLE TB_CUSTOMER_DATA
+(
+	CUST_ID VARCHAR(10)
+	, CUST_NAME VARCHAR(50)
+	, PHONE BIGINT
+	, EMAIL VARCHAR(50)
+	, ADDRESS VARCHAR(250)
+);
+
+SELECT * FROM TB_CUSTOMER_DATA;
+
+INSERT INTO TB_CUSTOMER_DATA VALUES
+('C1', 'Mohan Kumar', 9900807090, 'mohan@demo.com', 'Bangalore'),
+('C2', 'James Xavier', 8800905544, 'james@demo.com', 'Mumbai'),
+('C3', 'Priyanka Verma', 9900223333, 'priyanka@demo.com', 'Channai'),
+('C4', 'Eshai Maryam', 9900822111, 'eshai@demo.com', 'Delhi');
+
+SELECT * FROM TB_CUSTOMER_DATA;
+
+-- PRODUCT
+
+CREATE TABLE TB_PRODUCT_INFO
+(
+	PROD_ID VARCHAR(10)
+	, PROD_NAME VARCHAR(50)
+	, BRAND VARCHAR(50)
+	, PRICE INT
+);
+
+SELECT * FROM TB_PRODUCT_INFO;
+
+INSERT INTO TB_PRODUCT_INFO VALUES
+('P1', 'Samsung S22', 'Samsung', 800),
+('P2', 'Google Pixel 6 Pro', 'Google', 900),
+('P3', 'Sony Bravia Tv', 'Sony', 600),
+('P4', 'Dell XPS 17', 'Dell', 2000),
+('P5', 'iPhone 13', 'Apple', 800),
+('P6', 'Macbook Pro 16', 'Apple', 5000);
+
+SELECT * FROM TB_PRODUCT_INFO;
+
+-- ORDER DETAILS
+
+CREATE TABLE TB_ORDER_DETAILS
+(
+	ORD_ID BIGINT
+	, PROD_ID VARCHAR(10)
+	, QUANTITY INT
+	, CUST_ID VARCHAR(10)
+	, DISC_PERCENT INT
+	, DATE DATE
+);
+
+SELECT * FROM TB_ORDER_DETAILS;
+
+INSERT INTO TB_ORDER_DETAILS VALUES
+(1, 'P1', 2, 'C1', 10, '2020-01-01'),
+(2, 'P2', 1, 'C2', 0, '2020-01-01'),
+(3, 'P2', 3, 'C3', 20, '2020-02-01'),
+(4, 'P3', 1, 'C1', 0, '2020-02-01'),
+(5, 'P3', 1, 'C1', 0, '2020-03-01'),
+(6, 'P3', 4, 'C1', 25, '2020-04-01'),
+(7, 'P3', 1, 'C1', 0, '2020-05-01'),
+(8, 'P5', 1, 'C2', 0, '2020-02-01');
+
+SELECT * FROM TB_ORDER_DETAILS;

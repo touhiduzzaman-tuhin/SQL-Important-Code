@@ -1,0 +1,146 @@
+-- EMPLOYEE TABLE 
+
+CREATE TABLE EMPLOYEE
+(
+	EMP_ID VARCHAR(20)
+	, EMP_NAME VARCHAR(50)
+	, SALARY INT
+	, DEPT_ID VARCHAR(20)
+	, MANAGER_ID VARCHAR(20)
+);
+
+SELECT * FROM EMPLOYEE;
+
+INSERT INTO EMPLOYEE VALUES
+('E1', 'Rahul', 15000, 'D1', 'M1'),
+('E2', 'Manoj', 15000, 'D1', 'M1'),
+('E3', 'James', 55000, 'D2', 'M2'),
+('E4', 'Michael', 25000, 'D2', 'M2'),
+('E5', 'Ali', 20000, 'D10', 'M3'),
+('E6', 'Robin', 35000, 'D10', 'M3');
+
+SELECT * FROM EMPLOYEE;
+
+
+-- DEPERTMENT TABLE
+
+CREATE TABLE DEPARTMENT
+(
+	DEPT_ID VARCHAR(20)
+	, DEPT_NAME VARCHAR(50)
+);
+
+SELECT * FROM DEPARTMENT;
+
+INSERT INTO DEPARTMENT VALUES
+('D1', 'IT'),
+('D2', 'HR'),
+('D3', 'Finance'),
+('D4', 'Admin');
+
+SELECT * FROM DEPARTMENT;
+
+
+-- MANAGER TABLE
+
+CREATE TABLE MANAGER
+(
+	MANAGER_ID VARCHAR(20)
+	, MANAGER_NAME VARCHAR(50)
+	, DEPT_ID VARCHAR(20)
+);
+
+SELECT * FROM MANAGER;
+
+INSERT INTO MANAGER VALUES
+('M1', 'Prem', 'D3'),
+('M2', 'Shripadh', 'D4'),
+('M3', 'Nick', 'D1'),
+('M4', 'Cory', 'D1');
+
+SELECT * FROM MANAGER;
+
+
+-- PROJECTS TABLE
+
+CREATE TABLE PROJECTS
+(
+	PROJECT_ID VARCHAR(20)
+	, PROJECT_NAME VARCHAR(100)
+	, TEAM_MEMBER_ID VARCHAR(20)
+);
+
+SELECT * FROM PROJECTS;
+
+INSERT INTO PROJECTS VALUES
+('P1', 'Data Migration', 'E1'),
+('P1', 'Data Migration', 'E2'),
+('P1', 'Data Migration', 'M3'),
+('P2', 'ETL Tool', 'E1'),
+('P2', 'ETL Tool', 'M4');
+
+SELECT * FROM PROJECTS;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
